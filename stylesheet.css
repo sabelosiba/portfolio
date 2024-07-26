@@ -94,9 +94,7 @@ body.dark-mode {
     background: #121212(184, 182, 182);
     height: 100vh;
 }
-.home-content {
-    max-width: 700px;
-}
+
 
 .home-content h3 {
     font-size: 25px;
