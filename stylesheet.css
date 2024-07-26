@@ -83,7 +83,7 @@ body.dark-mode {
 
 .home {
     position: relative;
-    width: 100%;
+    width: auto;
     height: 100vh;
     background: transparent;
     display: flex;
