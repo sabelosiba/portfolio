@@ -95,7 +95,9 @@ body.dark-mode {
     height: 100vh;
 }
 
-
+.home-content {
+    width: auto;
+}
 .home-content h3 {
     font-size: 25px;
     font-weight: 700;
