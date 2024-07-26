@@ -90,9 +90,10 @@ body.dark-mode {
     align-items: center;
     padding: 70px 10% 0;
 }
-#home {
+#particles-js {
     background: #121212(184, 182, 182);
     height: 100vh;
+    width: auto;
 }
 
 .home-content {
