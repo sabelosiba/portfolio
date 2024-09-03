@@ -28,47 +28,71 @@ body.dark-mode {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-}
-
-
-
-.logo {
+  }
+  
+  .logo {
     font-size: 25px;
-    color: #ffffff;
+    color:  
+   #ffffff;
     text-decoration: none;
-    font-weight: 600;
-}
-
-.navbar {
+    font-weight: 600;  
+  
+  }
+  
+  .navbar {
     display: flex;
     gap: 35px;
-}
-
-.navbar a {
+  }
+  
+  .navbar a {
     font-size: 25px;
     color: #ffffff;
     text-decoration: none;
     font-weight: 500;
-    transition: .3s;
-}
-
-.navbar a:hover {
+    transition: 0.3s;
+  }
+  
+  .navbar a:hover {
     color: rgb(19, 241, 74);
-}
-
-.header-buttons {
+  }
+  
+  .header-buttons {
     display: flex;
     gap: 15px;
-}
-
-.theme-toggle {
+  }
+  
+  .theme-toggle {
     background: none;
     border: none;
     font-size: 25px;
     color: #ffffff;
     cursor: pointer;
     transition: color 0.3s;
-}
+  }
+  
+  /* Responsive Styles */
+  
+  @media only screen and (max-width: 768px) {
+    .navbar {
+      display: none; /* Hide navigation bar on small screens */
+    }
+    .header-buttons {
+      flex-grow: 1; /* Allow buttons to fill remaining space */
+    }
+    .nav-toggle {
+      display: block; /* Show navigation toggle button */
+      font-size: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #ffffff;
+    }
+  }
+  
+  /* Add styling for the navigation toggle button (optional) */
+  .nav-toggle:hover {
+    color: rgb(19, 241, 74);
+  }
 
 .btn-cv {
     display: inline-block;
