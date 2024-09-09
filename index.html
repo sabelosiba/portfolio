@@ -4,58 +4,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Sabelo Dlamini</title>
     <link rel="stylesheet" href="stylesheet.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header class="header">
-        <a href="#" class="logo">Siba.dev/</a>
+        
+        <a href="#home" class="logo"><i class='bx bx-code-alt' ></i>Siba.dev</a>
+        <button id="menu-toggle" class="menu-toggle"><i class='bx bx-menu'></i></button>
         <nav class="navbar">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
+            <a href="#home">// Home</a>
+            <a href="#about">// About</a>
+            <a href="#skills">// Skills</a>
+            <a href="#projects">// Projects</a>
         </nav>
         <div class="header-buttons">
-          <button id="theme-toggle" class="theme-toggle"><i class='bx bx-moon'></i></button>
+            <button id="theme-toggle" class="theme-toggle"><i class='bx bx-moon'></i></button>
         </div>
-        <button class="nav-toggle">
-          <i class='bx bx-menu'></i>
-        </button>
     </header>
+
     <section class="home" id="home">
         <div id="particles-js"></div>   
-            <div class="home-content">
-                <h3>Hello, friend</h3>
-                <h1>Sabelo Dlamini</h1>
-                <h3>I'm a <span class="typed-text"></span><span class="cursor">&nbsp;</span></h3>
-                <div class="home-sci">
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
-                    <a href="https://www.linkedin.com/in/sabelo-dlamini-637617285"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/sabelosiba"><i class='bx bxl-github'></i></a>
-                </div>
-                <br>
-                <a href="#about" class="btn-box">More About Me</a>
-                <a href="data/Sabelo Dlamini CV_240621_101808.pdf" class="btn-cv" download>Download CV</a>
+        <div class="home-content">
+            <h3>Hello, friend!</h3>
+            <h1>Sabelo Dlamini</h1>
+            <h3>I'm a <span class="typed-text"></span><span class="cursor">&nbsp;</span></h3>
+            <div class="home-sci">
+                <a href="https://www.linkedin.com/in/sabelo-dlamini-637617285"><i class='bx bxl-linkedin'></i></a>
+                <a href="https://github.com/sabelosiba"><i class='bx bxl-github'></i></a>
             </div>
+            <br>
+            <a href="#about" class="btn-box">More About Me</a>
+            <a href="data/Sabelo Dlamini CV_240621_101808.pdf" class="btn-cv" download>Download CV</a>
         </div>
     </section>
+    
     <section class="about" id="about">
-        
-        <div class="about-container">
-            <div class="about-img">
-                <img src="data/myabout.jpg" alt="Sabelo Dlamini">
+    <div class="about-container">
+        <div class="about-img">
+            <img src="data/myabout.jpg" alt="Sabelo Dlamini">
+        </div>
+        <div class="about-summary">
+            <h1 class="section-title">About Me</h1>
+            <h3>Full Stack Developer</h3>
+            <div class="about-text">
+                <p>My name is Sabelo Dlamini. I am a passionate software developer with a keen interest in technology and innovation. With a strong background in various programming languages and frameworks, I strive to create efficient and scalable software solutions. I am dedicated to continuous learning and staying updated with the latest industry trends. My goal is to leverage my skills to contribute to impactful projects and collaborate with like-minded professionals.</p>
             </div>
-            <div class="about-summary">
-                <h1 class="section-title">About Me</h1>
-                <h3>full stack developer</h3>
-                <about>
-                    <p>My name is Sabelo Dlamini. I am a passionate software developer with a keen interest in technology and innovation. With a strong background in various programming languages and frameworks, I strive to create efficient and scalable software solutions. I am dedicated to continuous learning and staying updated with the latest industry trends. My goal is to leverage my skills to contribute to impactful projects and collaborate with like-minded professionals.</p>
-                </about>
+            <!-- Interests section -->
+            <div class="interests">
+                <p>
+                    computer <span class="highlight">networks</span> |
+                    cybersecurity <span class="highlight">development</span> |
+                    software <span class="highlight">development</span> |
+                    cloud <span class="highlight">computing</span>
+                </p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+    
+
+
     <section class="skills" id="skills">
         <h1 class="section-title">Skills</h1>
         <br>
@@ -194,6 +205,7 @@
             </div> 
         </div>
     </section>
+    
     <section class="Projects" id="projects">
         <br>
         <br>
@@ -203,7 +215,7 @@
         <div class="projects-container">
             <button class="back-button"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: msFilter;"><path d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z"></path></svg></button>
             <div class="slide-container">
-                <div class="project" style="transform: translateX(0%);">
+                <div class="project">
                     <div class="project-content">
                         <h3>ML Object classification</h3>
                         <div class="project-descr">
@@ -229,12 +241,12 @@
                         </div>
                     </div>
                     <div class="project-image">
-                        <img src="data/coming+soon.jpg" alt="Project 2">
+                        <img src="data/ml.PNG" alt="Project 2">
                     </div>
                 </div>
-                <!--
+                
                 <div class="project">
-                    <div class="project-content" style="transform: translateX(100%);">
+                    <div class="project-content">
                         <h3>2D Median Filter for Image Smoothing </h3>
                         <div class="project-descr">
                             <p>The task is to implement two parallel filters for smoothing RGB colour images 
@@ -256,11 +268,11 @@
                         </div>
                     </div>
                     <div class="project-image">
-                        <img src="data/coming+soon.jpg" alt="Project 2">
+                        <img src="data/medianf.PNG" alt="Project 2">
                     </div>
                 </div>
                 
-                <div class="project"  style="transform: translateX(200%);">
+                <div class="project">
                     <div class="project-content">
                         <h3>Building a ‘video’ from a large image </h3>
                         <div class="project-descr">
@@ -288,15 +300,100 @@
                         <img src="data/coming+soon.jpg" alt="Project 2">
                     </div>
                 </div>
-            -->
-                <!-- Add more projects here -->
+                <div class="project">
+                    <div class="project-content">
+                        <h3>University Enrollments Analysis (2009-2016)</h3>
+                        <div class="project-descr">
+                            <p>This project focused on analyzing enrollment trends by race and gender,
+                                and evaluating student success rates at SA universities. Using Power BI, 
+                                I transformed the raw data into a star schema model, enabling efficient analysis. 
+                                Key insights included identifying disparities in enrollments by race, gender distribution, 
+                                and comparing success rates across the institutions. The findings help to understand how demographic factors play a role in higher education participation and performance, 
+                                and how these may differ between institutions. Also were visualized using various charts to highlight demographic patterns, supporting data-driven decision-making for university enrollment strategies.
+                            </p>
+                            <ul>
+                                <li>Power BI</li>
+                                <li>Python</li>
+                                <li>Power Query</li>
+                                <li></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="#" data-tooltip=""><i class='bx bxl-github'></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-tooltip=""><i class='bx bx-slideshow'></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="data/power.PNG" alt="Project 2">
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="project-content">
+                        <h3>Income vs Expense Tracker</h3>
+                        <div class="project-descr">
+                            <p>The Income and Expense Tracker is a Python-based application that helps users manage their financial transactions by recording incomes and expenses. Users can categorize transactions, save them by date, and generate financial summaries for a specific month or all recorded transactions. The app features CSV file export capabilities to store transaction data and view it externally, and it allows users to view detailed summaries of their income, expenses, and net balance over time.
+                            </p>
+                            <ul>
+                                <li>CSV</li>
+                                <li>Python</li>
+                                <li>TKinter</li>
+                                <li></li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    <a href="#" data-tooltip=""><i class='bx bxl-github'></i></a>
+                                </li>
+                                <li>
+                                    <a href="#" data-tooltip=""><i class='bx bx-slideshow'></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-image">
+                        <img src="data/incometracker.PNG" alt="Project 2">
+                    </div>
+                </div>
+                <div class="project">
+                <div class="project-content">
+                    <h3>Serverless Data Processing with Azure Functions and Power Automate</h3>
+                    <div class="project-descr">
+                        <p>This project involved creating a serverless data processing solution using Azure Functions and Power Automate. I developed an Azure Function to process JSON data files, extracting valuable information and storing it in Azure Table Storage. Power Automate was configured to trigger the Azure Function whenever a new JSON file was uploaded to Azure Blob Storage. The processed data was then summarized and sent via email. This project showcased my skills in serverless computing, data processing, and the integration of Azure Functions with Power Automate for efficient data workflows.
+                        </p>
+                        <ul>
+                            <li>Microsoft Azure</li>
+                            <li>Python</li>
+                            <li>Power Automate</li>
+                            <li></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <a href="#" data-tooltip=""><i class='bx bxl-github'></i></a>
+                            </li>
+                            <li>
+                                <a href="#" data-tooltip=""><i class='bx bx-slideshow'></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="project-image">
+                    <img src="data/functionappflow.jpg" alt="Project 2">
+                </div>
             </div>
             <button class="next-button"><svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 24 24" style="fill: rgba(0, 0, 0, 1);transform: rotate(180deg);msFilter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);"><path d="M21 11H6.414l5.293-5.293-1.414-1.414L2.586 12l7.707 7.707 1.414-1.414L6.414 13H21z"></path></svg></button>
         </div>
+                <!-- Add more projects here -->
+            </div>
         <div class="dots_container">
             <button class="slider-dot active-dot" data-id="0"></button>                
             <button class="slider-dot" data-id="1"></button>               
             <button class="slider-dot" data-id="2"></button>
+            <button class="slider-dot" data-id="3"></button>
+            <button class="slider-dot" data-id="4"></button>
+            <button class="slider-dot" data-id="5"></button>
         </div>
     </section>
     <br>
@@ -304,9 +401,9 @@
     <section class="workshop" id="workshop">
         <br>
         <br>
-        <span class="subtitle">Some amazing Workshop's / Events been part of</span>
+        <span class="subtitle">Some amazing Workshops / Events I've been part of</span>
         <br>
-        <h2>Workshop's / Events</h2>
+        <h2>Workshops / Events</h2>
         <br>
         <br>
         <br>
@@ -323,38 +420,81 @@
                             <p>
                                 <strong class="cursorr">
                                     <i class='bx bxs-right-arrow'></i>
-                                     Duration:
+                                    Duration:
                                 </strong>
                                 <br>
-                                 48 hours Hackathon
+                                48 hours Hackathon
                             </p>
                             <p>
                                 <strong class="cursorr">
                                     <i class='bx bxs-right-arrow'></i>
-                                     Total attendance:
+                                    Total attendance:
                                 </strong>
                                 <br>
-                                 7 Teams & 5-6 person per Team
+                                7 Teams & 5-6 people per Team
                             </p>
                             <h3>
                                 <i class='bx bxs-right-arrow'></i>
-                                     2024 City of Cape Town Hackathon:
+                                2024 City of Cape Town Hackathon:
                             </h3>
-                            <p>
-                                2nd place to first annugrual city of cape town hacktown
-                            </p>
+                            <p>2nd place at the first inaugural City of Cape Town Hackathon</p>
                         </div>
                     </div>
                     <div class="img-tab1"></div>
                 </div>
             </div>
+    
+            <input type="radio" name="tabs" id="tab2">
+            <label for="tab2">
+                <a href="#"><i class='bx bx-chat'></i></a>
+                <p>Ayoba Chat API Hackathon</p>
+            </label>
+            <div class="tab-content">
+                <div>
+                    <div class="txt-tab">
+                        <div>
+                            <p>
+                                <strong class="cursorr">
+                                    <i class='bx bxs-right-arrow'></i>
+                                    Duration:
+                                </strong>
+                                <br>
+                                3-day Hackathon
+                            </p>
+                            <p>
+                                <strong class="cursorr">
+                                    <i class='bx bxs-right-arrow'></i>
+                                    Total attendance:
+                                </strong>
+                                <br>
+                                60 Teams & 4-5 people per team across South Africa
+                            </p>
+                            <h3>
+                                <i class='bx bxs-right-arrow'></i>
+                                Ayoba Chat API Hackathon:
+                            </h3>
+                            <p>Participated in the South African-wide hackathon focusing on integrating the Ayoba chat API</p>
+                        </div>
+                    </div>
+                    <div class="img-tab2"></div>
+                </div>
+            </div>
         </div>
     </section>
+    
+    
     <script src="particles.js-master/particles.js">
     </script>
     <script src="/particles.js-master/demo/js/app.js">
     </script>
     <script>
+        
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.querySelector('.navbar').classList.toggle('active');
+        });
+
+        
+        
         const roles = ["software developer", "web developer", "programmer", "embedded system engineer"];
         let roleIndex = 0;
         let charIndex = 0;
@@ -390,6 +530,7 @@
             if (roles.length) setTimeout(type, 1000);
         });
 
+
         const themeToggle = document.getElementById('theme-toggle');
         themeToggle.addEventListener('click', () => {
             document.body.classList.toggle('dark-mode');
@@ -397,60 +538,55 @@
         });
         
         document.addEventListener("DOMContentLoaded", function() {
-            const projectContainer = document.querySelector(".slide-container");
-            const projects = document.querySelectorAll(".project");
-            const backButton = document.querySelector(".back-button");
-            const nextButton = document.querySelector(".next-button");
-            const dots = document.querySelectorAll(".slider-dot");
-            
-            // assign base start for current and witdh of div project
-            let currentIndex = 0;
+        const projectContainer = document.querySelector(".slide-container");
+        const projects = document.querySelectorAll(".project");
+        const backButton = document.querySelector(".back-button");
+        const nextButton = document.querySelector(".next-button");
+        const dots = document.querySelectorAll(".slider-dot");
+
+        let currentIndex = 0;
+
+        // Update dots to indicate the current project
+        function updateDots(index) {
+            dots.forEach((dot, i) => {
+                if (i === index) {
+                    dot.classList.add("active-dot");
+                } else {
+                    dot.classList.remove("active-dot");
+                }
+            });
+        }
+
+        // Show project content based on index
+        function showProject(index) {
             const projectWidth = projects[0].offsetWidth;
+            projectContainer.style.transform = `translateX(-${index * projectWidth}px)`;
+            updateDots(index);
+        }
 
-            // Update dots to indicate current project
-            function updateDots(index) {
-                dots.forEach((dot, i) => {
-                    if (i === index) {
-                        dot.classList.add("active-dot");
-                    } else {
-                        dot.classList.remove("active-dot");
-                    }
-                });
-            }
-
-            // Show project content based on index
-            function showProject(index) {
-                projectContainer.scrollTo({
-                    left: index * projectWidth,
-                    behavior: "smooth"
-                });
-                // projectContainer.style.transform = `translateX(-${index * 100}%)`;
-                // currentIndex = index;
-                updateDots(index);
-            }
-
-            // Event listeners for navigation buttons
-            backButton.addEventListener("click", function() {
-                currentIndex = (currentIndex === 0) ? projects.length - 1 : currentIndex - 1;
-                showProject(currentIndex);
-            });
-
-            nextButton.addEventListener("click", function() {
-                currentIndex = (currentIndex === projects.length - 1) ? 0 : currentIndex + 1;
-                showProject(currentIndex);
-            });
-
-            // Event listeners for dots navigation
-            dots.forEach((dot, index) => {
-                dot.addEventListener("click", function() {
-                    currentIndex = index;
-                    showProject(currentIndex);
-                });
-            });
-
-            // Initial update of dots to highlight the first project
-            updateDots(currentIndex);
+        // Event listeners for navigation buttons
+        backButton.addEventListener("click", function() {
+            currentIndex = (currentIndex === 0) ? projects.length - 1 : currentIndex - 1;
+            showProject(currentIndex);
         });
+
+        nextButton.addEventListener("click", function() {
+            currentIndex = (currentIndex === projects.length - 1) ? 0 : currentIndex + 1;
+            showProject(currentIndex);
+        });
+
+        // Event listeners for dots navigation
+        dots.forEach((dot, index) => {
+            dot.addEventListener("click", function() {
+                currentIndex = index;
+                showProject(currentIndex);
+            });
+        });
+
+        // Initialize dots and show the first project
+        updateDots(currentIndex);
+        showProject(currentIndex);
+    });
 
     </script>
 </body>

@@ -17,6 +17,7 @@ body.dark-mode {
 }
 
 
+/* Base styles */
 .header {
     position: fixed;
     top: 0;
@@ -28,109 +29,164 @@ body.dark-mode {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-  }
-  
-  .logo {
+}
+
+.logo {
     font-size: 25px;
-    color:  
-   #ffffff;
+    color: #ffffff;
     text-decoration: none;
-    font-weight: 600;  
-  
-  }
-  
-  .navbar {
+    font-weight: 600;
+}
+
+.navbar {
     display: flex;
     gap: 35px;
-  }
-  
-  .navbar a {
+}
+
+.navbar a {
     font-size: 25px;
     color: #ffffff;
     text-decoration: none;
     font-weight: 500;
-    transition: 0.3s;
-  }
-  
-  .navbar a:hover {
+    transition: .3s;
+}
+
+.navbar a:hover {
     color: rgb(19, 241, 74);
-  }
-  
-  .header-buttons {
+}
+
+.header-buttons {
     display: flex;
     gap: 15px;
-  }
-  
-  .theme-toggle {
+}
+
+.theme-toggle {
     background: none;
     border: none;
     font-size: 25px;
     color: #ffffff;
     cursor: pointer;
     transition: color 0.3s;
-  }
-  
-  /* Responsive Styles */
-  
-  @media only screen and (max-width: 768px) {
-    .navbar {
-      display: none; /* Hide navigation bar on small screens */
-    }
-    .header-buttons {
-      flex-grow: 1; /* Allow buttons to fill remaining space */
-    }
-    .nav-toggle {
-      display: block; /* Show navigation toggle button */
-      font-size: 30px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: #ffffff;
-    }
-  }
-  
-  /* Add styling for the navigation toggle button (optional) */
-  .nav-toggle:hover {
-    color: rgb(19, 241, 74);
-  }
-
-.btn-cv {
-    display: inline-block;
-    padding: 12px 28px;
-    background: rgb(19, 241, 74);
-    border-radius: 40px;
-    font-size: 16px;
-    color: #081b29;
-    text-decoration: none;
-    font-weight: 500;
 }
 
+/* Menu Toggle Button */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 5%;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .navbar {
+        display: none; /* Hide the navbar by default */
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+        z-index: 101; /* Make sure it's above other elements */
+    }
+
+    .navbar.active {
+        display: flex;
+        transform: translateX(0);
+    }
+
+    .navbar a {
+        font-size: 20px;
+        padding: 10px 0;
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .navbar a:hover {
+        color: rgb(19, 241, 74);
+    }
+
+    .header-buttons {
+        display: none; /* Optionally hide the theme toggle button */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 2%;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .navbar a {
+        font-size: 18px;
+    }
+
+    .theme-toggle {
+        font-size: 18px;
+    }
+}
+
+
+/* General styles */
 .home {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    background: transparent;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100vh;
     padding: 70px 10% 0;
-}
-#particles-js {
-    background: #121212(184, 182, 182);
-    height: 100%;
+    background: transparent; /* Adjust this if you have a specific background color or image */
+    color: #ffffff;
+    overflow: hidden; /* Ensure no overflow issues */
 }
 
-.home-content { 
-    width: 100%;
+#particles-js {
+    background: #121212(184, 182, 182);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    z-index: 1; /* Behind the content */
 }
-.home-content h3 {
-    font-size: 25px;
-    font-weight: 700;
+
+.home-content {
+    width: 50%;
+    z-index: 2; /* Above the particles */
 }
 
 .home-content h1 {
     font-size: 56px;
     font-weight: 700;
     margin: -3px 0;
+}
+
+.home-content h3 {
+    font-size: 25px;
+    font-weight: 700;
 }
 
 .home-content p {
@@ -140,6 +196,7 @@ body.dark-mode {
 .home-sci {
     margin-top: 30px;
     display: flex;
+    justify-content: left; /* Center icons horizontally */
     gap: 20px;
 }
 
@@ -163,31 +220,88 @@ body.dark-mode {
     box-shadow: 0 0 20px rgb(19, 241, 74);
 }
 
-.btn-box {
+.btn-box, .btn-cv {
     display: inline-block;
     padding: 12px 28px;
     background: rgb(19, 241, 74);
     border-radius: 40px;
     font-size: 16px;
     color: #081b29;
-    letter-spacing: 1px;
     text-decoration: none;
     font-weight: 500;
+    letter-spacing: 1px;
     transition: box-shadow 0.3s;
 }
 
-
-.btn-box:hover {
+.btn-box:hover, .btn-cv:hover {
     box-shadow: 0 0 5px rgb(190, 223, 223),
                 0 0 25px rgb(190, 223, 223),
                 0 0 50px rgb(190, 223, 223);
 }
 
-.btn-cv:hover {
-    box-shadow: 0 0 5px rgb(190, 223, 223),
-                0 0 25px rgb(190, 223, 223),
-                0 0 50px rgb(190, 223, 223);
+.btn-cv {
+    background: rgb(19, 241, 74); /* CV button specific background color */
 }
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .home {
+        padding: 50px 5%;
+        flex-direction: column; /* Stack content and particles vertically */
+        text-align: center;
+    }
+
+    #particles-js {
+        width: 100%;
+        height: 50%;
+    }
+
+    .home-content {
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .home-content h1 {
+        font-size: 3rem;
+    }
+
+    .home-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .home-sci a {
+        font-size: 1.5rem;
+    }
+
+    .btn-box, .btn-cv {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .home {
+        padding: 30px 2%;
+    }
+
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .home-sci a {
+        font-size: 1.2rem;
+    }
+
+    .btn-box, .btn-cv {
+        font-size: 0.8rem;
+        padding: 8px 16px;
+    }
+}
+
 
 /* Typing Effect */
 .typed-text {
@@ -218,45 +332,130 @@ body.dark-mode {
 /* About Section */
 .about {
     padding: 70px 10%;
+    background: transparent;
+    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background: transparent;
 }
+
 .section-title {
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 50px; /* Adjust margin as needed */
+    color: rgb(255, 255, 255); /* Adjust color if needed */
 }
 
 .about-container {
     display: flex;
-    gap: 50px;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    gap: 30px; /* Adjusted gap for better spacing on smaller screens */
+    align-items: center;
+    justify-content: center;
+}
+
+.about-img {
+    flex: 1 1 200px; /* Flex-grow, flex-shrink, and basis for image container */
 }
 
 .about-img img {
-    max-width: 200px;
+    max-width: 100%; /* Ensure image scales responsively */
+    height: auto;
     border-radius: 10px;
 }
 
-.about-summary h3 {
-    font-size: 40px;
-    line-height: 1.5;
+.about-summary {
+    flex: 2 1 300px; /* Flex-grow, flex-shrink, and basis for text container */
     text-align: left;
+}
+
+.about-summary h3 {
+    font-size: 30px;
+    line-height: 1.5;
     color: rgb(19, 241, 74);
     font-family: 'Courier New', Courier, monospace;
+    margin: 0 0 20px 0; /* Add margin below h3 */
 }
+
 .about-summary h1 {
-    font-size: 60px;
+    font-size: 40px;
     line-height: 1.5;
-    text-align: left;
     font-family: 'Courier New', Courier, monospace;
+    margin: 0 0 20px 0; /* Add margin below h1 */
 }
-.about-summary about {
-    font-size: 20px;
-    line-height: 2;
-    text-align: left;
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.8;
     font-family: 'Courier New', Courier, monospace;
+    margin: 0; /* Remove margin for paragraph */
+}
+
+/* Interests Section */
+.interests p {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #fff; /* White text for the default text */
+}
+
+.interests .highlight {
+    color: rgb(19, 241, 74); /* Green color for the second word of each interest */
+    font-weight: bold; /* Optional: Make the highlighted word bold */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .about {
+        padding: 50px 5%;
+    }
+
+    .section-title {
+        font-size: 32px;
+        margin-bottom: 30px;
+    }
+
+    .about-summary h3 {
+        font-size: 24px;
+    }
+
+    .about-summary h1 {
+        font-size: 32px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+    }
+
+    .interests p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about {
+        padding: 30px 2%;
+    }
+
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .about-summary h3 {
+        font-size: 20px;
+    }
+
+    .about-summary h1 {
+        font-size: 28px;
+    }
+
+    .about-text p {
+        font-size: 14px;
+    }
+
+    .interests p {
+        font-size: 14px;
+    }
 }
 
 /* Skills Section */
@@ -333,56 +532,51 @@ body.dark-mode {
 }
 
 /* Projects section */
-.projects{
+.projects {
     width: 100%;
     height: 100vh;
     padding: 70px 10% 0;
+    box-sizing: border-box;
 }
 
-.project-title{
+.project-title {
     text-align: center;
     font-size: 60px;
 }
 
 .projects-container {
     width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    display: grid;
-    grid-template-columns: 1fr auto 1fr; /* Divide the space into three columns */
-    align-items: center;
+    height: calc(100vh - 70px); /* Adjust height to fit within viewport */
     position: relative;
+    overflow: hidden;
+    display: flex; /* Changed to flex to align with horizontal scrolling */
+    align-items: center;
 }
-
 
 .slide-container {
+    display: flex;
     height: 100%;
-    position: relative;
-    overflow-x: hidden;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease-in-out;
 }
 
-
 .project {
-    margin: 30px;
-    margin-bottom: 20px;
+    min-width: 100%; /* Ensures each project takes full container width */
+    box-sizing: border-box;
+    margin: 0; /* Remove margin to fit properly within slide container */
     padding: 10px;
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    align-items: center;    
+    align-items: center;
 }
-
 
 .project-content {
     position: relative;
     grid-column: 1 / 7;
     grid-row: 1 / -1;
     display: block;
-    unicode-bidi: isolate;
 }
-
 
 .project-content h3 {
     font-size: 30px;
@@ -391,16 +585,13 @@ body.dark-mode {
     display: block;
 }
 
-
 .project-descr {
     font-size: 18px;
     color: rgb(19, 241, 74);
     line-height: 1.3;
     text-align: justify;
     display: block;
-    unicode-bidi: isolate;
 }
-
 
 .project-descr p {
     border-radius: 0.5rem;
@@ -414,57 +605,50 @@ body.dark-mode {
     white-space: normal;
 }
 
-
 .project-descr ul {
     display: flex;
     flex-wrap: wrap;
     margin-top: 20px;
 }
 
-
 .project-descr ul li {
     list-style-type: none;
     margin: 0px 20px 5px 0px;
 }
 
-
 .project-descr ul li a {
     font-size: 30px;
 }
-
 
 .project-image {
     position: relative;
     z-index: -1;
     border-radius: 0.5rem;
     transform: translateY(-0.5rem);
-    background: linear-gradient(0.4turn, rgb(19, 241, 74), rgb(22, 97, 41));
-    grid-column :6 / -1 ;
+    /* background: linear-gradient(0.4turn, rgb(19, 241, 74), rgb(22, 97, 41)); */
+    grid-column: 6 / -1;
     grid-row: 1 / -1;
     box-shadow: #71ff84;
     overflow: hidden;
 }
 
-.project-image img{
+.project-image img {
     vertical-align: middle;
     border-radius: 0.5rem;
     position: relative;
     mix-blend-mode: multiply;
-    filter: grayscale(100%) contrast(1);
+    /* filter: grayscale(100%) contrast(1); */
     max-width: 100%;
     box-shadow: rgb(19, 241, 74);
-    max-width: 100%;
     height: auto;
 }
 
-
-.dots_container{
+.dots_container {
     display: flex;
     justify-content: center;
     gap: 8px;
     padding-top: 10px;
 }
-
 
 .slider-dot {
     width: 24px;
@@ -472,190 +656,120 @@ body.dark-mode {
     border-radius: 50%;
     border: 2px solid rgb(0, 0, 0);
     cursor: pointer;
-    transition: transform .1s ease;
+    transition: background-color .3s ease, transform .1s ease;
 }
-
 
 .active-dot {
     background-color: rgb(19, 241, 74);
 }
 
-
+.back-button, .next-button {
+    color: #fffdfd;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
 
 .back-button {
-    grid-column: 1/ 2; /* Adjusted to align right */
-    grid-row: 1 / 2;
-    justify-self: center; /* Center horizontally */
+    left: 10px;
 }
-
 
 .next-button {
-    grid-column: 3 / -1; /* Adjusted to align left */
-    grid-row: 1 / 2;
-    justify-self: center; /* Center horizontally */
+    right: 10px;
 }
 
 
-
-
-.project:hover {
-    transform: scale(1.1);
-}
-/* workshps section*/
-.workshop{
+/* workshop section */
+.workshop {
     width: 100%;
-    height: 100vh;
-    padding: 70px 10% 0;;
+    padding: 70px 10%;
+    box-sizing: border-box;
 }
-.workshop span{
+
+.workshop span {
     font-size: 20px;
     display: block;
     text-align: center;
 }
 
-.workshop h2{
+.workshop h2 {
     color: rgb(19, 241, 74);
     font-weight: 750;
     text-align: center;
     font-size: 40px;
 }
-.tabs{
+
+.tabs {
     display: flex;
+    flex-direction: column; /* Change to column to stack tabs vertically */
     position: relative;
-    flex-wrap: wrap;
-    justify-content: left;
 }
-.tabs > input{
+
+.tabs > input {
     display: none;
 }
 
-.tabs > input:checked + label{
+.tabs > input:checked + label {
     background-color: rgba(3, 77, 3, 0.33);
 }
-@media only screen and (max-width: 1239px) {
-    .tabs label {
-        display: block;
-        border-bottom-left-radius: 0;
-        border-top-left-radius: 0;
-        width: calc(100% / 4);
-        height: auto;
-        padding: 15px 0 20px;
-        text-align: center;
-    }
-}
+
 .tabs label {
     position: relative;
-    order: 1;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    border-bottom-left-radius: 15px;
-    border-top-left-radius: 15px;
-    width: 325px;
-    height: calc(500px / 8);
-    padding: 10px 15px;
-    margin-bottom: 0;
-    background-color: #fffffff0;
+    justify-content: flex-start;
+    width: 100%; /* Make the labels full width */
+    height: 50px;
+    background-color: #a8a8a8f0;
     cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 15px;
     transition: background-color 500ms ease-in-out;
+    margin-bottom: 5px; /* Add some space between the tabs */
 }
 
-.tabs label a{
+.tabs label a {
     width: 50px;
     height: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(255, 255, 255);
-    text-decoration: none;
+    color: #fff;
     font-size: 30px;
 }
 
-.tabs > input:checked + label + .tab-content{
-    display: block;
-}
-@media only screen and (max-width: 1239px) {
-    .tabs .tab-content {
-        order: 2;
-        position: relative;
-        width: 100%;
-    }
-}
-
 .tabs .tab-content {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: calc(100% - 325px);
+    position: relative;
+    width: 100%;
     padding: 0;
     margin: 0;
     display: none;
 }
 
+.tabs > input:checked + label + .tab-content {
+    display: block;
+}
+
 .tabs .tab-content > div {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: stretch;
     background-color: #fff;
     background-image: url(https://portimgbucky.s3.us-west-2.amazonaws.com/images/noise-50.png);
     color: #3a7542;
 }
-@media only screen and (max-width: 1239px) {
-    .tabs .tab-content > div > div {
-        width: 50%;
-        height: auto;
-    }
-}
-.tabs .tab-content > div > div {
-    height: 500px;
-    color: #3a7542;
-}
-@media only screen and (max-width: 1239px) {
-    .tabs .txt-tab {
-        min-height: 25vh;
-    }
-}
 
 .tabs .txt-tab {
-    display: flex;
-    display: table-cell;
-    vertical-align: middle;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
     width: 50%;
     padding: 4vh calc(2vw + 15px);
-    
 }
-.txt-tab p {
-    display: block;
+
+.txt-tab p, .txt-tab h3 {
     font-size: 1.5em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    unicode-bidi: isolate;
+    margin: 1em 0;
 }
-.txt-tab h3 {
-    display: block;
-    font-size: 1.5em;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
-}
-@media only screen and (max-width: 1239px) {
-    .tabs .tab-content > div > div {
-        width: 50%;
-        height: auto;
-    }
-}
-.tabs .img-tab1 {
-    background-image: url(data/hackathon.jpg);
-}
+
 .tabs [class*="img-tab"] {
     width: 50%;
     background-repeat: no-repeat;
@@ -664,3 +778,36 @@ body.dark-mode {
     min-height: 35vh;
 }
 
+.img-tab1 {
+    background-image: url(data/hackathon.jpg);
+}
+
+.img-tab2 {
+    background-image: url(data/366A9929.jpg); /* Add an appropriate image path */
+}
+
+@media only screen and (max-width: 1239px) {
+    .tabs {
+        flex-direction: column;
+    }
+
+    .tabs label {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .tabs .tab-content {
+        position: relative;
+        width: 100%;
+    }
+
+    .tabs .tab-content > div > div {
+        width: 100%;
+        height: auto;
+    }
+
+    .tabs .txt-tab {
+        width: 100%;
+        padding: 4vh 5%;
+    }
+}
