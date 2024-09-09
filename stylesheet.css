@@ -811,3 +811,58 @@ body.dark-mode {
         padding: 4vh 5%;
     }
 }
+
+
+/* Footer Section */
+.footer {
+    background-color: #111;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: auto;
+}
+
+.footer h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.footer .socials {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.footer .socials li {
+    margin: 0 10px;
+}
+
+.footer .socials li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer .socials li a:hover {
+    color: rgb(19, 241, 74); /* Green color on hover */
+}
+
+.footer p {
+    font-size: 14px;
+    color: #bbb;
+}
