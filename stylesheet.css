@@ -161,21 +161,31 @@ body.dark-mode {
     background: transparent; /* Adjust this if you have a specific background color or image */
     color: #ffffff;
     overflow: hidden; /* Ensure no overflow issues */
+    position: relative;
 }
 
 #particles-js {
-    background: #121212(184, 182, 182);
+    background: #121212;
     position: absolute;
     top: 0;
-    right: 0;
-    width: 50%;
-    height: 100%;
-    z-index: 1; /* Behind the content */
+    left: 0;
+    width: 100%; /* Cover the full width of the .home section */
+    height: 100%; /* Cover the full height of the .home section */
+    z-index: 1; /* Behind the content and image */
 }
 
 .home-content {
     width: 50%;
     z-index: 2; /* Above the particles */
+}
+
+.home-image {
+    width: 50%;
+    z-index: 3; /* Above the particles */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
 }
 
 .home-content h1 {
@@ -196,7 +206,7 @@ body.dark-mode {
 .home-sci {
     margin-top: 30px;
     display: flex;
-    justify-content: left; /* Center icons horizontally */
+    justify-content: left; /* Align icons to the left */
     gap: 20px;
 }
 
@@ -243,12 +253,30 @@ body.dark-mode {
     background: rgb(19, 241, 74); /* CV button specific background color */
 }
 
+.home-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px; /* Rounded corners */
+    border: 4px solid rgba(19, 241, 74, 0.8); /* Soft green border with opacity */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3); /* Smooth shadow for depth */
+    z-index: 4; /* Ensure the image is above all elements */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth hover transition */
+}
+
+.home-image img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 0 5px rgb(190, 223, 223),
+                0 0 25px rgb(190, 223, 223),
+                0 0 50px rgb(190, 223, 223); /* Enhance shadow on hover */
+}
+
+
 /* Responsive styles */
 @media (max-width: 768px) {
     .home {
+        flex-direction: column;
+        justify-content: center;
         padding: 50px 5%;
-        flex-direction: column; /* Stack content and particles vertically */
-        text-align: center;
     }
 
     #particles-js {
@@ -258,7 +286,8 @@ body.dark-mode {
 
     .home-content {
         width: 100%;
-        margin-top: 20px;
+        text-align: center;
+        margin-bottom: 20px;
     }
 
     .home-content h1 {
@@ -276,6 +305,16 @@ body.dark-mode {
     .btn-box, .btn-cv {
         font-size: 0.9rem;
         padding: 10px 20px;
+    }
+
+    .home-image {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .home-image img {
+        width: 80%; /* Adjust the size for smaller screens */
     }
 }
 
@@ -300,13 +339,16 @@ body.dark-mode {
         font-size: 0.8rem;
         padding: 8px 16px;
     }
-}
 
+    .home-image img {
+        width: 100%; /* Full width for mobile */
+    }
+}
 
 /* Typing Effect */
 .typed-text {
     font-family: 'Courier New', Courier, monospace;
-    color:rgb(19, 241, 74);
+    color: rgb(19, 241, 74);
     font-size: 40px;
     font-weight: bold;
 }
@@ -328,6 +370,7 @@ body.dark-mode {
     50% { opacity: 0; }
     100% { opacity: 1; }
 }
+
 
 /* About Section */
 .about {
