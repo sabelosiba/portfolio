@@ -69,7 +69,6 @@ body.dark-mode {
     transition: color 0.3s;
 }
 
-/* Menu Toggle Button */
 .menu-toggle {
     display: none;
     background: none;
@@ -77,6 +76,16 @@ body.dark-mode {
     font-size: 25px;
     color: #ffffff;
     cursor: pointer;
+}
+
+.menu-close {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 25px;
+    color: #ffffff;
+    cursor: pointer;
+    margin-top: 20px;
 }
 
 /* Responsive styles */
@@ -102,7 +111,7 @@ body.dark-mode {
         flex-direction: column;
         padding: 20px;
         box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
-        z-index: 101; /* Make sure it's above other elements */
+        z-index: 101;
     }
 
     .navbar.active {
@@ -123,11 +132,15 @@ body.dark-mode {
     }
 
     .header-buttons {
-        display: none; /* Optionally hide the theme toggle button */
+        display: none; /* Hide the theme toggle button */
     }
 
     .menu-toggle {
         display: block;
+    }
+
+    .menu-close {
+        display: block; /* Show the close button */
     }
 }
 
@@ -148,6 +161,7 @@ body.dark-mode {
         font-size: 18px;
     }
 }
+
 
 
 /* General styles */
@@ -586,35 +600,30 @@ body.dark-mode {
 /* Projects section */
 .projects {
     width: 100%;
-    height: 100vh;
-    padding: 70px 10% 0;
+    padding: 70px 5%;
     box-sizing: border-box;
 }
 
 .project-title {
     text-align: center;
-    font-size: 60px;
+    font-size: 2rem;
 }
 
 .projects-container {
     width: 100%;
-    height: calc(100vh - 70px); /* Adjust height to fit within viewport */
     position: relative;
     overflow: hidden;
-    display: flex; /* Changed to flex to align with horizontal scrolling */
-    align-items: center;
+
 }
 
 .slide-container {
     display: flex;
-    height: 100%;
     transition: transform 0.5s ease-in-out;
 }
 
 .project {
     min-width: 100%; /* Ensures each project takes full container width */
     box-sizing: border-box;
-    margin: 0; /* Remove margin to fit properly within slide container */
     padding: 10px;
     display: grid;
     grid-gap: 10px;
@@ -624,25 +633,22 @@ body.dark-mode {
 }
 
 .project-content {
-    position: relative;
     grid-column: 1 / 7;
     grid-row: 1 / -1;
-    display: block;
+
 }
 
 .project-content h3 {
-    font-size: 30px;
+    font-size: 1.5rem;
     margin: 10px 0 30px;
     color: rgb(19, 241, 74);
-    display: block;
 }
 
 .project-descr {
-    font-size: 18px;
+    font-size: 1rem;
     color: rgb(19, 241, 74);
     line-height: 1.3;
     text-align: justify;
-    display: block;
 }
 
 .project-descr p {
@@ -650,11 +656,7 @@ body.dark-mode {
     background-color: rgb(32, 107, 42);
     color: #fff;
     padding: 20px 25px;
-    display: inline-block;
-    max-width: 100%;
-    text-align: justify;
     margin: 0;
-    white-space: normal;
 }
 
 .project-descr ul {
@@ -669,27 +671,21 @@ body.dark-mode {
 }
 
 .project-descr ul li a {
-    font-size: 30px;
+    font-size: 1.5rem;
 }
 
 .project-image {
-    position: relative;
     z-index: -1;
     border-radius: 0.5rem;
     transform: translateY(-0.5rem);
-    /* background: linear-gradient(0.4turn, rgb(19, 241, 74), rgb(22, 97, 41)); */
-    grid-column: 6 / -1;
+    grid-column: 7 / -1;
     grid-row: 1 / -1;
     box-shadow: #71ff84;
     overflow: hidden;
 }
 
 .project-image img {
-    vertical-align: middle;
     border-radius: 0.5rem;
-    position: relative;
-    mix-blend-mode: multiply;
-    /* filter: grayscale(100%) contrast(1); */
     max-width: 100%;
     box-shadow: rgb(19, 241, 74);
     height: auto;
@@ -715,23 +711,6 @@ body.dark-mode {
     background-color: rgb(19, 241, 74);
 }
 
-.back-button, .next-button {
-    color: #fffdfd;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.back-button {
-    left: 10px;
-}
-
-.next-button {
-    right: 10px;
-}
 
 
 /* workshop section */
