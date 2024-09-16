@@ -789,6 +789,7 @@ body.dark-mode {
     background-color: #fff;
     background-image: url(https://portimgbucky.s3.us-west-2.amazonaws.com/images/noise-50.png);
     color: #3a7542;
+    flex-direction: row;
 }
 
 .tabs .txt-tab {
@@ -817,6 +818,7 @@ body.dark-mode {
     background-image: url(data/366A9929.jpg); /* Add an appropriate image path */
 }
 
+/* Responsive adjustments */
 @media only screen and (max-width: 1239px) {
     .tabs {
         flex-direction: column;
@@ -832,16 +834,21 @@ body.dark-mode {
         width: 100%;
     }
 
-    .tabs .tab-content > div > div {
-        width: 100%;
-        height: auto;
+    .tabs .tab-content > div {
+        flex-direction: column; /* Stack text above image */
     }
 
     .tabs .txt-tab {
         width: 100%;
         padding: 4vh 5%;
     }
+
+    .tabs [class*="img-tab"] {
+        width: 100%;
+        min-height: 20vh; /* Adjust height as needed */
+    }
 }
+
 
 
 /* Footer Section */
