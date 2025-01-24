@@ -219,6 +219,7 @@ body.dark-mode {
 .home-sci {
     margin-top: 30px;
     display: flex;
+    align-items: center;
     justify-content: center; /* Align icons to the left */
     gap: 20px;
 }
@@ -414,13 +415,13 @@ body.dark-mode {
 }
 
 .about-img img {
-    max-width: 100%; /* Ensure image scales responsively */
+    max-width: 50%; /* Ensure image scales responsively */
     height: auto;
     border-radius: 10px;
 }
 
 .about-summary {
-    flex: 2 1 300px; /* Flex-grow, flex-shrink, and basis for text container */
+    flex: 2 1 400px; /* Flex-grow, flex-shrink, and basis for text container */
     text-align: left;
 }
 
