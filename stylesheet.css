@@ -411,6 +411,7 @@ body.dark-mode {
 }
 
 .about-img {
+    
     flex: 1 1 200px; /* Flex-grow, flex-shrink, and basis for image container */
 }
 
@@ -626,6 +627,7 @@ body.dark-mode {
 .project-title {
     text-align: center;
     font-size: 2rem;
+    font-size: 60px
 }
 
 .projects-container {
