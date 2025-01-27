@@ -188,7 +188,7 @@ body.dark-mode {
 }
 
 .home-content {
-    width: 50%;
+    width: 75%;
     z-index: 2; /* Above the particles */
 }
 
@@ -415,9 +415,17 @@ body.dark-mode {
 }
 
 .about-img img {
-    max-width: 50%; /* Ensure image scales responsively */
+    max-width: 100%; /* Ensure image scales responsively */
     height: auto;
     border-radius: 10px;
+    border: 2px solid rgba(63, 252, 110, 0.8); /* Soft green border with opacity */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+.about-img img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 0 5px rgb(190, 223, 223),
+                0 0 25px rgb(190, 223, 223),
+                0 0 50px rgb(190, 223, 223); /* Enhance shadow on hover */
 }
 
 .about-summary {
@@ -574,8 +582,9 @@ body.dark-mode {
 /* Full Stack section: Two columns for Frontend and Backend */
 .skills-row {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 /* Frontend and Backend sections */
@@ -590,11 +599,20 @@ body.dark-mode {
 
 .skill-card {
   padding: 20px;
-  background-color: #979797;
+  background-color: transparent;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #71ff84;
   border-radius: 8px;
   text-align: center;
   margin-bottom: 15px;
+}
+
+
+.skill-card:hover {
+    border-color: rgb(58, 224, 100); /* Change border color on hover */
+    box-shadow: 0 0 5px rgb(190, 223, 223),
+                0 0 25px rgb(190, 223, 223),
+                0 0 50px rgb(190, 223, 223);
 }
 
 
